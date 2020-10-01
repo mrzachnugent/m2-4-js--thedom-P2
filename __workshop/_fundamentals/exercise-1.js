@@ -6,7 +6,10 @@
 //
 
 const convertToString = (arr) => {
-  // Insert missing solution please
+  if (Array.isArray(arr)) {
+    return arr.map((x) => x.toString());
+  }
+  return undefined;
 };
 
 // Part 2 - Test

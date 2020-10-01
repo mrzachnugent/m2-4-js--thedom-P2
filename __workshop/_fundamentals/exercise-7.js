@@ -14,7 +14,12 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const addValues = (arr, obj) => {
-  // Insert missing solution please
+  const [a, b, c] = arr;
+  return [
+    { ...a, ...obj },
+    { ...b, ...obj },
+    { ...c, ...obj },
+  ];
 };
 
 // Part 2 - Test

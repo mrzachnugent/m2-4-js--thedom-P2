@@ -10,6 +10,48 @@ test("Exercise 7", () => {
         { name: "liv", age: 36 },
         { name: "dave", age: 43 },
       ],
+      { isAvailable: false }
+    )
+  ).toStrictEqual([
+    { name: "chris", age: 23, isAvailable: false },
+    { name: "liv", age: 36, isAvailable: false },
+    { name: "dave", age: 43, isAvailable: false },
+  ]);
+  expect(
+    addValues(
+      [
+        { name: "chris", age: 23 },
+        { name: "liv", age: 36 },
+        { name: "dave", age: 43 },
+      ],
+      { isPretty: true }
+    )
+  ).toStrictEqual([
+    { name: "chris", age: 23, isPretty: true },
+    { name: "liv", age: 36, isPretty: true },
+    { name: "dave", age: 43, isPretty: true },
+  ]);
+  expect(
+    addValues(
+      [
+        { name: "chris", age: 23 },
+        { name: "liv", age: 36 },
+        { name: "dave", pets: 43 },
+      ],
+      { isAvailable: true }
+    )
+  ).toStrictEqual([
+    { name: "chris", age: 23, isAvailable: true },
+    { name: "liv", age: 36, isAvailable: true },
+    { name: "dave", pets: 43, isAvailable: true },
+  ]);
+  expect(
+    addValues(
+      [
+        { name: "chris", age: 23 },
+        { name: "liv", age: 36 },
+        { name: "dave", age: 43 },
+      ],
       { isAvailable: true }
     )
   ).toStrictEqual([
@@ -17,7 +59,6 @@ test("Exercise 7", () => {
     { name: "liv", age: 36, isAvailable: true },
     { name: "dave", age: 43, isAvailable: true },
   ]);
-  // add more tests here...
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

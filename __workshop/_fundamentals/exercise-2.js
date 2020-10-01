@@ -9,7 +9,13 @@
 //
 
 const redacted = (arr) => {
-  // Insert missing solution please
+  return arr.map((el) => {
+    if (typeof el !== "string") {
+      return el;
+    } else {
+      return "redacted";
+    }
+  });
 };
 
 // Part 2 - Test

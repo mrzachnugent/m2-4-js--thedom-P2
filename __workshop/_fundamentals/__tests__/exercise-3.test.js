@@ -9,7 +9,24 @@ test("Exercise 3", () => {
     { name: "Bob", isAvailable: false },
     { name: "Josie", isAvailable: false },
   ]);
-  // add more tests here...
+  expect(
+    insert([{ name: "Ross" }, { name: "Josie" }], { isAvailable: false })
+  ).toStrictEqual([
+    { name: "Ross", isAvailable: false },
+    { name: "Josie", isAvailable: false },
+  ]);
+  expect(
+    insert([{ name: "Bob" }, { name: "Josie" }], { isAvailable: true })
+  ).toStrictEqual([
+    { name: "Bob", isAvailable: true },
+    { name: "Josie", isAvailable: true },
+  ]);
+  expect(
+    insert([{ name: "Bob" }, { name: "Cat" }], { isAvailable: false })
+  ).toStrictEqual([
+    { name: "Bob", isAvailable: false },
+    { name: "Cat", isAvailable: false },
+  ]);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

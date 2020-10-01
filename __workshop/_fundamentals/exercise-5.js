@@ -8,7 +8,16 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
+  return nums
+    .map((x) => {
+      if (nums.length > 0 && typeof x === "number") {
+        return x ** 2;
+      } else if (nums.length > 0 && typeof x !== "number") {
+        return parseInt(x.toString().replace(x, 0));
+      }
+      return undefined;
+    })
+    .reduce((acc, cv) => acc + cv, 0);
 };
 
 // Part 2 - Test

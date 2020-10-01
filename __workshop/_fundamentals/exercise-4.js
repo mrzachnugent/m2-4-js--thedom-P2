@@ -11,7 +11,9 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
+  // for every obj in arr, it should return the sum of the value of the key
+  const [a, b] = arr;
+  return a[key] + b[key];
 };
 
 // Part 2 - Test

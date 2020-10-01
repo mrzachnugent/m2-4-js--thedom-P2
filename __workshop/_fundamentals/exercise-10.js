@@ -27,7 +27,13 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+  let uniqueArr1 = arr1.filter((num1) => {
+    return arr2.indexOf(num1) === -1;
+  });
+  let uniqueArr2 = arr2.filter((num2) => {
+    return arr1.indexOf(num2) === -1;
+  });
+  return [...uniqueArr1, ...uniqueArr2];
 };
 
 // Part 2 - Test

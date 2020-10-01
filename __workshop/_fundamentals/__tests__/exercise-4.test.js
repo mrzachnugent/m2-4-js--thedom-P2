@@ -9,6 +9,33 @@ test("Exercise 4", () => {
         { name: "Bob", amount: 100 },
         { name: "Josie", amount: 45 },
       ],
+      "amo"
+    )
+  ).toBe(NaN);
+  expect(
+    count(
+      [
+        { name: "Bob", amount: 100 },
+        { name: "Josie", amount: 145 },
+      ],
+      "amount"
+    )
+  ).toBe(245);
+  expect(
+    count(
+      [
+        { name: "Bob", amount: 1000 },
+        { name: "Josie", amount: 45 },
+      ],
+      "amount"
+    )
+  ).toBe(1045);
+  expect(
+    count(
+      [
+        { name: "Bob", amount: 100 },
+        { name: "Josie", amount: 45 },
+      ],
       "amount"
     )
   ).toBe(145);
